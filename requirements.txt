@@ -4,3 +4,4 @@ django>=1.9
 django-haystack
 mysqlclient
 django-mysql
+django-bootstrap3

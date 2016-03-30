@@ -5,3 +5,4 @@ django-haystack
 mysqlclient
 django-mysql
 django-bootstrap3
+django-debug-toolbar

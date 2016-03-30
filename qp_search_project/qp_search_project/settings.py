@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     #added plugins
     'bootstrap3',
+
+    #own local apps
+    'searcher',
 ]
 
 MIDDLEWARE_CLASSES = [

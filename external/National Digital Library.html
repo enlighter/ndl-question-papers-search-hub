@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html style="height: 645px;"><head>
+<title>National Digital Library</title><meta name="robots" content="NOODP">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="en">
+<!-- Mobile support -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="National%20Digital%20Library_files/googleapis.css" type="text/css">
+<link rel="stylesheet" href="National%20Digital%20Library_files/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="National%20Digital%20Library_files/bootstrap-material-design.css" type="text/css">
+<link rel="stylesheet" href="National%20Digital%20Library_files/ripples.css" type="text/css">
+<link rel="stylesheet" href="National%20Digital%20Library_files/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="National%20Digital%20Library_files/jquery.css" type="text/css">
+<script src="National%20Digital%20Library_files/jquery-1.js"></script>
+<script src="National%20Digital%20Library_files/material.js"></script>
+<script src="National%20Digital%20Library_files/ripples.js"></script>
+<script src="National%20Digital%20Library_files/bootstrap.js"></script>
+<script src="National%20Digital%20Library_files/bootstrap-typeahead.js"></script>
+<script src="National%20Digital%20Library_files/md5.js"></script>
+<script src="National%20Digital%20Library_files/experience-tracker.js"></script>
+<script src="National%20Digital%20Library_files/jquery.js"></script>
+<style type="text/css">
+.nav-stacked>.btn-primary .active {
+	background-color: #000000;
+}
+
+.modal-title {
+	font-weight: 400;
+}
+
+.colored-panel {
+	background-color: #00AA9A;
+}
+
+.main-tab.active {
+	background-color: #006600;
+}
+/*****************/
+::-webkit-scrollbar {
+	width: 10px;;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+	background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #009688;
+}
+
+.navbar-fixed-top .main-tab a {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.saturate {
+	-webkit-filter: saturate(3);
+	filter: saturate(3);
+}
+
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.contrast {
+	-webkit-filter: contrast(160%);
+	filter: contrast(160%);
+}
+
+.brightness {
+	-webkit-filter: brightness(0.25);
+	filter: brightness(0.25);
+}
+
+.blur {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+}
+
+.invert {
+	-webkit-filter: invert(100%);
+	filter: invert(100%);
+}
+
+.sepia {
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%);
+}
+
+.huerotate {
+	-webkit-filter: hue-rotate(180deg);
+	filter: hue-rotate(180deg);
+}
+
+.rss.opacity {
+	-webkit-filter: opacity(50%);
+	filter: opacity(50%);
+}
+</style>
+<style type="text/css">
+#sliders {
+	padding-left: 10px;
+	padding-right: 5px;
+	height: 470px;
+}
+
+.invert {
+	padding-left: 10px;
+}
+
+.bx-wrapper .bx-viewport {
+	left: 0px;
+	border: 1px solid rgb(161, 78, 46);
+}
+
+.bx-wrapper {
+	height: 100%;
+}
+
+.bx-viewport {
+	min-height: 100%;
+	border: 5px solid #ECB32C;
+	max-height: 450px;
+}
+
+.ss {
+	background: rgb(247, 247, 247);
+	/* 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,a7c976+73,398235+100 */
+	*/
+	/* 	background: rgb(201, 222, 150); /* Old browsers */
+	*/
+	/* 	background: -moz-radial-gradient(center, ellipse cover, rgba(201, 222, 150, 1) */
+	/* 		0%, rgba(167, 201, 118, 1) 73%, rgba(57, 130, 53, 1) 100%); */
+	/* 	/* FF3.6-15 */
+	*/
+	/* 	background: -webkit-radial-gradient(center, ellipse cover, rgba(201, 222, 150, 1) */
+	/* 		0%, rgba(167, 201, 118, 1) 73%, rgba(57, 130, 53, 1) 100%); */
+	/* 	/* Chrome10-25,Safari5.1-6 */
+	*/
+	/* 	background: radial-gradient(ellipse at center, rgba(201, 222, 150, 1) 0%, */
+	/* 		rgba(167, 201, 118, 1) 73%, rgba(57, 130, 53, 1) 100%); */
+	/* 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	*/
+	/* 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', */
+	/* 		endColorstr='#398235', GradientType=1); */
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+#slider1>li>div>:nth-child(even) {
+	background-color: #FFEBA6;
+}
+
+#slider2>:nth-child(even) {
+	background-color: #E2FFE4;
+}
+
+#slider3>:nth-child(even) {
+	background-color: #89C5A7;
+}
+
+#slider1>li>div>:nth-child(odd) {
+	background-color: #D8BD61;
+}
+
+#slider2>:nth-child(odd) {
+	background-color: #D4F7B5;
+}
+
+#slider3>:nth-child(odd) {
+	background-color: #D4FFE9;
+}
+
+#slider1>li>div>div {
+	padding-top: 34px;
+}
+
+#slider1>li>div>div>div>h3 {
+	font-weight: 400;
+	padding-left: 10px;
+}
+
+.btn-main>.btn {
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+}
+
+#sliders>div {
+	padding: 2px;
+	margin: 0px;
+}
+
+#slider2>li {
+	height: 225px;
+	overflow: hidden;
+	text-align: center;
+	margin: auto;
+	text-align: -moz-center;
+	padding-top: 20px;
+}
+
+#slider3>li {
+	height: 220px;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-top: 15px;
+	margin: auto;
+	text-align: -moz-center;
+	padding-top: 15px;
+}
+
+#slider2>li>h4 {
+	font-weight: 400;
+}
+
+#sliders>div>h3 {
+	background: #7DB053;
+	border-radius: 100px;
+	color: #000000;
+	padding: 5px;
+}
+
+.overflow-off {
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#slider-div * h3 {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/* search panel */
+#search-panel {
+	/* 	background-image: url('./img/001.jpg'); */
+	margin-top: 40px;
+	width: 100%;
+	z-index: 1005;
+	/* 	position: fixed; */
+	/* 	height: 180px; */
+	padding-bottom: 18px;
+}
+
+.background-stretch {
+	-webkit-background-size: cover; /* For WebKit*/
+	-moz-background-size: cover; /* Mozilla*/
+	-o-background-size: cover; /* Opera*/
+	background-size: cover; /* Generic*/
+}
+
+#search-key {
+	border: none;
+	width: 100%;
+	background: #fff;
+	padding: 5px 10px 3px 10px;
+	font-size: 20px;
+	margin: 0px;
+	background: #fff;
+	width: 100%;
+	border-radius: 2px;
+}
+
+#search-lang {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+}
+
+#search-button {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 100%;
+}
+/* slider panels */
+.index-panel-heading {
+	font-size: 30px;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+
+#board-panels {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.board-wooden-border {
+	background-image: url('./img/blackboard-c.jpg');
+}
+
+/** aspect panel **/
+#panel-aspect {
+	padding: 0px;
+	height: 28em;
+	margin-top: 40px;
+}
+
+.card {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.card-1 {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.2s ease-in-out;
+}
+
+.card-1:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
+}
+</style>
+
+<style type="text/css">
+.main-tab:hover {
+	background: #00AA9A;
+}
+
+#header-nav-bar {
+	min-height: 40px;
+	margin: 0px;
+	height: 40px;
+	background-color: #1A503E;
+}
+
+.ndl-nav-bar {
+	margin-left: 225px;
+}
+
+#header-logo {
+	background-color: #1A503E;
+	z-index: 1040
+}
+
+.logo-img {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+#footer-nav-bar {
+	min-height: 30px;
+	margin: 0px;
+	height: 30px;
+	background-color: #148661;
+}
+
+.dropdown-menu {
+	min-width: 136px;
+}
+
+#nav-feedback {
+	background: #BB1231;
+	font-weight: 500;
+	color: #ffffff;
+}
+
+#nav-feedback:hover {
+	background: #555555;
+	color: #ffffff;
+}
+
+.navbar-fixed-top .main-tab a {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.navbar-fixed-bottom * .nav-menu-header {
+	font-size: 16px;
+	font-weight: 400;
+}
+</style>
+
+
+
+
+</head>
+
+<body style="overflow: hidden; height: 645px;">
+	<div class="container-fluid ss" style="height: 100%; padding: 0px; margin-top: 40px;">
+	<div class="navbar navbar-fixed-top material_navbar" id="header-nav-bar" style="background: #1A503E">
+	<div class="container-fluid" style="height: 100%">
+		<div class="navbar-header">
+			<a class="navbar-brand material_navbar_brand" href="https://ndl.iitkgp.ac.in/index.php" style="padding-top: 2px; height: 100%; padding-bottom: 0px;"><img src="National%20Digital%20Library_files/ndl-logo.png" class="img-responsive" style="height: 36px;"></a>
+		</div>
+		<div class="navbar-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+					<li class="dropdown main-tab"><a href="javascript:void(0)" data-target="#" id="nav-browse" class="dropdown-toggle" data-toggle="dropdown" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-lg fa-bars"></i> Browse <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="javascript:void(0)" id="nav-browse-type" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-lg fa-clipboard"></i> By type</a></li><li><a href="javascript:void(0)" id="nav-browse-subject" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-lg fa-cube"></i> By subject</a></li><li><a href="javascript:void(0)" id="nav-browse-source" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-lg fa-globe"></i> By source</a></li></ul></li><li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-search" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-lg fa-search"></i> Search</a></li>			</ul>
+						<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown main-tab"><a href="javascript:void(0)" data-target="#" id="nav-language" class="dropdown-toggle" data-toggle="dropdown" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-lg fa-language"></i> Language <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="javascript:void(0)" id="eng" style="padding-top: 5px; padding-bottom: 5px;" onclick="change_ui_language('eng')">English</a></li><li><a href="javascript:void(0)" id="hin" style="padding-top: 5px; padding-bottom: 5px;" onclick="change_ui_language('hin')">हिन्दी</a></li><li><a href="javascript:void(0)" id="ben" style="padding-top: 5px; padding-bottom: 5px;" onclick="change_ui_language('ben')">বাংলা</a></li></ul></li><li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-login" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-lg fa-user"></i> Log-In</a></li>			</ul>
+					</div>
+	</div>
+</div>
+	<div id="" class="rows">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding: 0px;">
+				<div style="height: 161px; text-align: center; padding-right: 30px;">
+					<div style="height: 100%; padding: 5px; background-color: #FFAD1F; padding-left: 0px; border-top-left-radius: 100px; border-bottom-right-radius: 100px; padding-right: 10px;">
+						<h4 style="margin-bottom: 0px; padding-left: 4px; color: #000000; text-align: center;">Sponsored By</h4>
+						<img class="img-responsive" alt="" src="National%20Digital%20Library_files/mhrd_small.png" style="width: 41%; margin: auto;">
+						<h4 style="padding-left: 4px; color: #000000; font-weight: 400;">
+							Ministry of Human Resource Development						</h4>
+					</div>
+				</div>
+				<!-- 				<div id="triangle-bottomRight"></div> -->
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px;">
+				<div style="text-align: center; padding-top: 20px;">
+					<span style="font-size: 40px; font-weight: 500; text-align: center; color: #000000;"><img src="National%20Digital%20Library_files/ndl-logo-green.png" style="width: 8%; vertical-align: middle"> National Digital Library</span>
+				</div>
+				<div class="well well-sm card rows form-group" style="margin-top: 10px; padding: 2px; border: 1px solid black;">
+					<div class="col-md-9 col-lg-9 col-sm-9 col-xs-9" style="padding: 0px;">
+						<input id="search-key" style="border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: #ccc; width: 100%;" placeholder="Enter your search key..." autocomplete="off" type="text"><ul class="typeahead dropdown-menu"></ul>
+					</div>
+					<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2" style="padding: 0px;">
+						<select id="search-lang" class="form-control" style="background: #CECECE; font-weight: 500;">
+							<option selected="selected" value="en">English</option><option value="hi">हिन्दी</option><option value="bn">বাংলা</option>					</select>
+					</div>
+					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1" style="padding: 0px;">
+						<button id="search-button" type="button" style="background-color: #1A503E; padding-left: 0px; padding-right: 0px;" title="Search" class="btn btn-raised btn-primary">
+							<span class="glyphicon glyphicon-search" style="padding-top: 5px;"></span>
+						</button>
+					</div>
+				<span class="material-input"></span></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding: 0px; max-height: 179px;">
+				<!-- 				<div id="triangle-topleft"></div> -->
+				<div style="height: 161px; text-align: center; padding-left: 30px;">
+					<div style="height: 100%; padding: 5px; background-color: #FFAD1F;; padding-left: 0px; border-top-right-radius: 100px; border-bottom-left-radius: 100px; padding-left: 10px; text-align: center;">
+						<h4 style="margin-bottom: 0px; padding-left: 4px; color: #000000;">Coordinated By</h4>
+						<img class="img-responsive" alt="" src="National%20Digital%20Library_files/iitkgp.png" style="width: 20%; margin: auto;">
+						<h4 style="width: 214px; margin: auto; padding-left: 4px; color: #000000; font-weight: 400;">Indian Institute of Technology Kharagpur</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr style="border: 1px solid; margin-top: 161px; height: 0px; margin-bottom: 0px;">
+		<div id="sliders" class="rows">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="height: 100%">
+				<h3 style="text-align: center; font-weight: 400; background: #89C5A7;">About National Digital Library</h3>
+				<div style="max-width: 100%; margin: 0px auto;" class="bx-wrapper"><div style="width: 100%; overflow: hidden; position: relative; height: 900px;" class="bx-viewport"><ul id="slider1" class="bxslider" style="margin-left: -40px; width: auto; position: relative; transition-duration: 0.5s; transform: translate3d(0px, -1698.35px, 0px);"><li class="bx-clone" style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>1,110,364 Items have been authored by 1 lakh authors</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-author.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Repository hosts contents from multiple subject domains like Technology, Science, Humanities, Agriculture and others</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-subject.png">
+								</div>
+							</div>
+														</div>
+					</li><li class="bx-clone" style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Items are available in more than 10 languages</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-language.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Repository integrates contents from different Indian Institutional Repositories</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-source.png">
+								</div>
+							</div>
+													</div>
+					</li>
+					<li style="float: none; list-style: outside none none; position: relative; width: 557px;"><img style="background-repeat: no-repeat;" alt="" src="National%20Digital%20Library_files/NDL.gif"></li>
+					<li style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+													<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Educational materials are available for users ranging from primary to post-graduate levels</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-edu-level.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>More than 15 types of learning resources are available</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-learning-resource-type.png">
+								</div>
+							</div>
+														</div>
+					</li>
+					<li style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>1,110,364 Items have been authored by 1 lakh authors</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-author.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Repository hosts contents from multiple subject domains like Technology, Science, Humanities, Agriculture and others</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-subject.png">
+								</div>
+							</div>
+														</div>
+					</li>
+					<li style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Items are available in more than 10 languages</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-language.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Repository integrates contents from different Indian Institutional Repositories</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-source.png">
+								</div>
+							</div>
+													</div>
+					</li>
+				<li class="bx-clone" style="float: none; list-style: outside none none; position: relative; width: 557px;"><img style="background-repeat: no-repeat;" alt="" src="National%20Digital%20Library_files/NDL.gif"></li><li class="bx-clone" style="float: none; list-style: outside none none; position: relative; width: 557px;">
+						<div style="height: 450px;">
+													<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>Educational materials are available for users ranging from primary to post-graduate levels</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-edu-level.png">
+								</div>
+							</div>
+														<div style="height: 50%;">
+								<div style="float: left; width: 67%;">
+									<h3>More than 15 types of learning resources are available</h3>
+								</div>
+								<div>
+									<img class="invert" style="background-repeat: no-repeat; width: 30%;" alt="" src="National%20Digital%20Library_files/panel-learning-resource-type.png">
+								</div>
+							</div>
+														</div>
+					</li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-5" style="height: 100%">
+				<h3 style="text-align: center; font-weight: 400; background: #71C1EF;">Featured Sources </h3>
+				<div style="max-width: 100%; margin: 0px auto;" class="bx-wrapper"><div style="width: 100%; overflow: hidden; position: relative; height: 450px;" class="bx-viewport"><ul id="slider2" class="bxslider" style="text-align: center; margin-left: -40px; width: auto; position: relative; transition-duration: 0.5s; transform: translate3d(0px, -675px, 0px);"><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22NPTEL%22&amp;page=1"><img src="National%20Digital%20Library_files/nptel.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">NPTEL</h3>
+							<h4>MHRD sponsored project that hosts 10,000+ video lectures in engineering domain</h4> </a></li><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Digital%20Library%20of%20India%22&amp;page=1"><img src="National%20Digital%20Library_files/dli.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">DLI</h3>
+							<h4>More than 5,00,000 global classical books</h4> </a></li>
+								  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Society%20For%20Natural%20Language%20Technology%20Research%22&amp;page=1"><img src="National%20Digital%20Library_files/snltr.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">SNLTR</h3>
+							<h4>Digitization of literary works by Rabindranath Tagore</h4> </a></li>
+				  				  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Inflibnet%20%3A%3A%20Shodhganga%22&amp;page=1"><img src="National%20Digital%20Library_files/inflibnet.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">Inflibnet</h3>
+							<h4>Hosts 38,000+ thesis and synopsis reports authored by Indian Researchers from different institutes</h4> </a></li>
+				  				  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22KrishiKosh%20-%20Indian%20National%20Agricultural%20Research%20System%22&amp;page=1"><img src="National%20Digital%20Library_files/icar.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">KrishiKosh</h3>
+							<h4>More than 50,000 agricultural books, journals, articles and reports</h4> </a></li>
+				  				  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22NCERT%22&amp;page=1"><img src="National%20Digital%20Library_files/ncert.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">NCERT</h3>
+							<h4>Hindi and English books of different subjects for students from primary to 12th standard</h4> </a></li>
+				  				  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22NPTEL%22&amp;page=1"><img src="National%20Digital%20Library_files/nptel.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">NPTEL</h3>
+							<h4>MHRD sponsored project that hosts 10,000+ video lectures in engineering domain</h4> </a></li>
+				  				  <li style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Digital%20Library%20of%20India%22&amp;page=1"><img src="National%20Digital%20Library_files/dli.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">DLI</h3>
+							<h4>More than 5,00,000 global classical books</h4> </a></li>
+				  				<li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Society%20For%20Natural%20Language%20Technology%20Research%22&amp;page=1"><img src="National%20Digital%20Library_files/snltr.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">SNLTR</h3>
+							<h4>Digitization of literary works by Rabindranath Tagore</h4> </a></li><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;"><a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-source&amp;part&amp;&amp;part&amp;&amp;part&amp;source=%22Inflibnet%20%3A%3A%20Shodhganga%22&amp;page=1"><img src="National%20Digital%20Library_files/inflibnet.png" style="width: 20%; display: inline-block;">
+							<h3 style="font-weight: 400; color: #510B0B;">Inflibnet</h3>
+							<h4>Hosts 38,000+ thesis and synopsis reports authored by Indian Researchers from different institutes</h4> </a></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-5" style="height: 100%">
+				<h3 style="text-align: center; font-weight: 400; background: #AED0C8;">News and Events</h3>
+				<div style="max-width: 100%; margin: 0px auto;" class="bx-wrapper"><div style="width: 100%; overflow: hidden; position: relative; height: 440px;" class="bx-viewport"><ul id="slider3" class="bxslider" style="margin-left: -40px; width: auto; position: relative; transition-duration: 0.5s; transform: translate3d(0px, -1100px, 0px);"><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=24" target="_blank"><img alt="" src="National%20Digital%20Library_files/news9.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> Talk in ETD 2015 India Conference: Nov'15 </h5> </a>					</li><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Article published in YOJANA: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Talk in NKN Annual Workshop: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Regional (West) Workshop on IDR: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Article published in Science and Culture: Jan-Feb'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Upcoming Regional (South) Workshop on IDR:Mar'16</h5> 					</li>
+								  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=23" target="_blank"><img alt="" src="National%20Digital%20Library_files/news1.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> NDL Project Office Inauguration: Apr'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=21" target="_blank"><img alt="" src="National%20Digital%20Library_files/news2.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> NDL Session in INDEST Meet at Mohali: Apr'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=22" target="_blank"><img alt="" src="National%20Digital%20Library_files/news3.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> Brainstorming Session on Metadata Schema: May'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <img alt="" src="National%20Digital%20Library_files/news4.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Hon'ble HRD Minister reviews NDL project: May'15</h5> 					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/workshop/wshopdetails.php?eid=13" target="_blank"><img alt="" src="National%20Digital%20Library_files/news5.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> National Workshop on IDR: Jun'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/workshop/wshopdetails.php?eid=15" target="_blank"><img alt="" src="National%20Digital%20Library_files/news6.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> Regional (North-East) Workshop on IDR : Jul'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <img alt="" src="National%20Digital%20Library_files/news7.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Emerging Trends in Academic Libraries Seminar: Aug'15</h5> 					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/workshop/wshopdetails.php?eid=16" target="_blank"><img alt="" src="National%20Digital%20Library_files/news8.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> Regional (North) Workshop on IDR: Aug'15</h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=24" target="_blank"><img alt="" src="National%20Digital%20Library_files/news9.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> Talk in ETD 2015 India Conference: Nov'15 </h5> </a>					</li>
+									  <li style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Article published in YOJANA: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Talk in NKN Annual Workshop: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Regional (West) Workshop on IDR: Jan'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Article published in Science and Culture: Jan-Feb'16</h5> <h5 style="color: #0000ff">
+							<i class="fa fa-bookmark fa-2"></i> Upcoming Regional (South) Workshop on IDR:Mar'16</h5> 					</li>
+									<li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=23" target="_blank"><img alt="" src="National%20Digital%20Library_files/news1.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> NDL Project Office Inauguration: Apr'15</h5> </a>					</li><li class="bx-clone" style="width: 332px; float: none; list-style: outside none none; position: relative;">
+				  <a class="link" href="http://www.ndlproject.iitkgp.ac.in/ndl/home/events/eventdetails.php?eid=21" target="_blank"><img alt="" src="National%20Digital%20Library_files/news2.jpg" style="width: 50%; z-index: 1009;"><h5 style="color: #510B0B">
+							<i class="fa fa-bookmark fa-2"></i> NDL Session in INDEST Meet at Mohali: Apr'15</h5> </a>					</li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+				<div style="margin: auto; text-align: center;" class="btn-main">
+					<br> <br> <br> <a class="btn btn-raised btn-md btn-inverse" href="https://ndl.iitkgp.ac.in/account-registration.php" style="background-color: #1A503E;"> <i class="fa fa-sign-in fa-lg"></i>  Register</a><br>
+					<a data-toggle="modal" data-target="#modal-login" class="btn btn-inverse btn-raised" style="background-color: #1A503E;"> <i class="fa fa-lg fa-sign-in"></i> Log In</a><br>
+					<br> <br> <a href="https://ndl.iitkgp.ac.in/home.php?nav=search" class="btn btn-raised btn-inverse" style="background-color: #1A503E;"> <i class="fa fa-lg fa-search"></i> Search</a><br>
+					<a href="https://ndl.iitkgp.ac.in/home.php?nav=browse-type&amp;part&amp;&amp;&amp;page=1&amp;part&amp;type=%22text%22" class="btn btn-inverse btn-raised" style="background-color: #1A503E;"> <i class="fa fa-lg fa-bars"></i>  Browse</a>
+					<br>
+				</div>
+			</div>
+		</div>
+	<div class="container-fluid navbar navbar-fixed-bottom" style="background: #1A503E" id="footer-nav-bar">
+	<div class="navbar-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav">
+		<li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-about" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-info-circle"></i> About</a></li><li class="main-tab"><a class="nav-menu-header" href="https://ndl.iitkgp.ac.in/faq.php" target="_blank" "="" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-puzzle-piece"></i> FAQ</a></li><li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-disclaimer" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-legal"></i> Disclaimer</a></li><li class="main-tab"><a class="nav-menu-header" href="https://ndl.iitkgp.ac.in/help.php" target="_blank" "="" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-question-circle"></i> Help</a></li>		</ul>
+				<ul class="nav navbar-nav navbar-right">
+		<li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-feedback" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-mail-reply-all"></i> Feedback</a></li><li class="dropdown main-tab"><a href="javascript:void(0)" data-target="#" id="" class="dropdown-toggle" data-toggle="dropdown" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-group"></i> Social <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://facebook.com/" target="_blank" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-facebook-official fa-lg"></i> Facebook</a></li><li><a href="https://plus.google.com/" target="_blank" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-google-plus-square fa-lg"></i> Google Plus</a></li><li><a href="https://twitter.com/" target="_blank" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li><li><a href="https://linkedin.com/" target="_blank" style="padding-top: 5px; padding-bottom: 5px;"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li></ul></li><li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-sponsor" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-support"></i> Sponsor</a></li><li class="main-tab"><a class="nav-menu-header" href="javascript:void(0)" id="nav-contact" style="padding-top:5px; padding-bottom:5px;"><i class="fa fa-lg fa-phone-square"></i> Contact</a></li>		</ul>
+			</div>
+</div>
+		<!-- Open source code -->
+		<script type="text/javascript">
+  $(document).ready(function () {
+	  $.material.init();
+	  //$("#slider-div").height($(window).height()-299)
+	  $(".select").dropdown({"optionClass": "withripple"});
+	  
+// 	  	$('#slider1').bxSlider({
+// 	  		mode: 'vertical',
+// // 	  		slideMargin: 5,
+//  	  		auto: false,
+// 	  		pager: true,
+// 	  		autoHover: true,
+// 	  		minSlides: 2,
+// 	  		maxSlides: 5,
+// 	  		moveSlides: 1,
+// 	  		stopAutoOnClick: true,
+// 	  		pause: 6000,
+// 	  		autoDelay: 7000
+// 	  	});
+
+		$('.bxslider').bxSlider({
+	  		mode: 'vertical',
+// 	  		slideMargin: 5,
+ 	  		auto: true,
+	  		pager: false,
+	  		autoHover: true,
+	  		minSlides: 2,
+	  		maxSlides: 5,
+	  		moveSlides: 1,
+	  		stopAutoOnClick: true,
+	  		startSlide: 0,
+	  		autoDelay: 7000
+	  	});
+  	//remove get params
+		var url = window.location.pathname;
+		history.replaceState("", "", url);
+		$("#alertModal").modal("show");
+      
+  });
+
+  $(".dropdown-menu li a").click(function(){
+	  var selText = $(this).text();
+	  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+	});
+	
+  
+  $(window).on("resize", function () {
+    $("html, body").height($(window).height());
+    $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight());
+    $(".pages").height($(window).height());
+  }).trigger("resize");
+
+  
+
+  function cleanSource(html) {
+    var lines = html.split(/\n/);
+
+    lines.shift();
+    lines.splice(-1, 1);
+
+    var indentSize = lines[0].length - lines[0].trim().length,
+        re = new RegExp(" {" + indentSize + "}");
+
+    lines = lines.map(function (line) {
+      if (line.match(re)) {
+        line = line.substring(indentSize);
+      }
+
+      return line;
+    });
+
+    lines = lines.join("\n");
+
+    return lines;
+  }
+
+  $("#opensource").click(function () {
+    $.get(window.location.href, function (data) {
+      var html = $(data).find(window.page).html();
+      html = cleanSource(html);
+      $("#source-modal pre").text(html);
+      $("#source-modal").modal();
+    });
+  });
+ ////////////////////////////////////////////////////////// $(window).on("scroll", function(){alert("ss"); });
+</script>
+
+<script type="text/javascript">
+	$("#search-key").keypress(function(e) { if (e . which == 13) initiate_normal_search(); });
+	$("#search-button") . on ( "click", function () { initiate_normal_search(); } );
+	function get_search_key(){
+		var key = $("#search-key").val().trim();
+		if($("#search-key").val() == "") return;
+					if($("#search-key").val() == "*") return;
+		return (key);
+	}
+	function initiate_normal_search(){
+		var search_lang = $("#search-lang").val();
+		var key = get_search_key();
+		/// handling blank search
+			if(typeof key === "undefined"){
+				$("#blank-search-modal").modal(); return;
+			}
+		/// logging the search: tincan
+			logStatement({ "key" : String(key) }, 0);
+		document.cookie = "search-lang="+search_lang;
+		window.location="home.php?nav=search&part&"+$("#search-key").val()+"&part&&page=1&part&";
+	}
+	/************************************************************************************* search language change */
+	$('#search-key').typeahead({
+		ajax:
+		{
+			url: "./ajax/transliteration.php",
+			method: "get",
+			loadingClass: "loading-circle",
+			preDispatch: function (query) {
+				return {
+					query : query,
+					lang: $("#search-lang").val()
+				}
+			}
+		},
+		matcher: function (item) {
+			return true;
+		}
+	});
+	$("#nav-search").on ( "click", function () { window.location = "home.php?nav=search&part&&part&&page=1&part&"; });
+	$("#nav-browse-type") . on ( "click", function () { window.location = "home.php?browse-type&part&&part&&part"; });
+	$("#nav-browse-subject") . on ( "click", function () { window.location = "home.php?browse-subject&part&&part&&part"; });
+	$("#nav-browse-source") . on ( "click", function () { window.location = "home.php?browse-source&part&&part&&part"; });
+	</script>
+<div id="modal-login" class="modal fade" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h4 class="modal-title">
+					<i class="fa fa-sign-in fa-lg"></i> Log In</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom: 0px;">
+				<form method="post" action="./account-login-logout.php" role="form" id="loginForm">
+					<input name="params" id="params" type="hidden">
+					<div class="form-group is-empty" style="margin: 0px;">
+						<label for="inputEmail" class="col-md-3 control-label"><i class="fa fa-envelope-o"></i> E-Mail</label>
+						<div class="col-md-9">
+							<input class="form-control" id="inputEmail" required="required" name="email" autocomplete="off" placeholder="E-Mail" type="email">
+						</div>
+					<span class="material-input"></span></div>
+					<div class="form-group is-empty" style="margin: 0px;">
+						<label for="inputPassword" class="col-md-3 control-label"><i class="fa fa-key"></i> Password</label>
+						<div class="col-md-9">
+							<input class="form-control" id="inputPassword" required="required" name="password" autocomplete="off" placeholder="Password" type="password">
+						</div>
+					<span class="material-input"></span></div>
+					<div class="form-group">
+						<label for="rem-me" class="col-md-3 control-label">Remember Me</label>
+						<div class="col-md-3" style="padding-top: 8px;">
+							<div class="togglebutton">
+								<label> <input name="rem-me" id="rem-me" type="checkbox"><span class="toggle"></span></label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<a style="float: right;" href="https://ndl.iitkgp.ac.in/account-recovery.php">Forgot Password							</a>
+						</div>
+					</div>
+										<div class="form-group" style="margin-top: 90px;">
+						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-2"></div>
+						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3" style="padding: 0px;">
+							<img src="National%20Digital%20Library_files/simple-php-captcha.png" id="captcha" class="img-responsive">
+						</div>
+						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 btn-group-sm" style="padding-left: 5px;">
+							<a class="btn btn-default btn-fab" href="javascript:void(0)" style="padding-left: 10px; padding-right: 10px; padding-top: 13px;" onclick="recaptcha()"> <i class="fa fa-lg fa-refresh"></i>
+							</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-group is-empty" style="margin-top: 0;">
+							<input class="form-control" id="text-captcha" required="required" name="captcha" autocomplete="off" placeholder="Enter the text here" type="text">
+						<span class="material-input"></span></div>
+					</div>
+										</form>
+			</div>
+			<div class="modal-footer" style="text-align: center; padding-bottom: 25px; padding-top: 60px;">
+				<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+				<div class="rows">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<!-- 
+						<a href="../account/account-registration.php"
+							class="btn btn-raised btn-inverse btn-block"></a>
+							 -->
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block" onclick="log_in_button_click()">Log In</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+function log_in_button_click(){
+	if($("#inputPassword").val() == "" || $("#inputEmail").val() == "" || $("#text-captcha").val() == ""){
+		alert("Please fillup all the fields");
+		return;
+	}
+	//document.cookie = "history="+ window.location.search;
+	$("#inputPassword").val( CryptoJS.MD5($("#inputPassword").val()) );
+	$("#params").val(window.location.search);
+	//console.log($("#params").val());
+	$("#loginForm").submit();
+}
+function recaptcha(){
+	$.post("./libs/captcha/generate_captcha.php", {},
+			function(reply) {
+				reply = reply.replace("NULL", "");
+				$("#captcha").attr("src", reply);
+			});
+}
+$("#text-captcha").keypress(function(e) {
+	if (e.which == 13)
+		log_in_button_click();
+});
+</script>
+<style type="text/css">
+.feed-text {
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+}
+</style>
+<div class="modal fade" tabindex="-1" id="modal-feedback">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title text-primary">
+					<i class="fa fa-lg fa-mail-reply-all"></i> Feedback</h4>
+			</div>
+			<div class="modal-body" style="padding-top: 0px;">
+			<h5>You are in <span id="user_focus"></span> page, please help us with providing feedback on different features of this page</h5>				<div id="feedback-history"></div>
+				<div class="rows">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 10px 0px 0px 0px; text-align: right;">
+						<strong>Select Page-Category</strong>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<select id="feedback-cat" style="padding: 8px;">
+						<option selected="selected" value="search">Search</option><option value="browse-source">Browse by Source</option><option value="browse-type">Browse by Type</option><option value="browse-subject">Browse by Subject</option><option value="content">Content</option><option value="account">Account</option><option value="other">Other</option>						</select>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 10px 0px 0px 0px;">
+						<strong>Select Feature</strong>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding-left: 0px;">
+												<div style="display: none;" class="sub-cat">
+							<select id="sub-search" style="padding: 8px;">
+							<option selected="selected" value="search-result">Search Result</option><option value="search-box">Search Box</option><option value="filters">Filters</option><option value="breadcrumbs">Breadcrumbs</option><option value="content-type-classification">Content type classification</option><option value="pagination">Pagination</option><option value="advanced-search">Advanced Search</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-browse-source" style="padding: 8px;">
+							<option selected="selected" value="source-selection">Source Selection</option><option value="browse-result">Browse Result</option><option value="filters">Filters</option><option value="breadcrumbs">Breadcrumbs</option><option value="pagination">Pagination</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-browse-type" style="padding: 8px;">
+							<option selected="selected" value="type-selection">Type Selection</option><option value="browse-result">Browse Result</option><option value="filters">Filters</option><option value="breadcrumbs">Breadcrumbs</option><option value="pagination">Pagination</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-browse-subject" style="padding: 8px;">
+							<option selected="selected" value="subject-selection">Subject Selection</option><option value="browse-result">Browse Result</option><option value="filters">Filters</option><option value="breadcrumbs">Breadcrumbs</option><option value="pagination">Pagination</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-content" style="padding: 8px;">
+							<option selected="selected" value="accessibility">Accessibility</option><option value="type">Type</option><option value="metadata">Metadata</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-account" style="padding: 8px;">
+							<option selected="selected" value="registration">Registration</option><option value="login">Log-in</option><option value="account-recovery">Account Recovery</option><option value="profile-customization">Profile Customization</option>							</select>
+						</div>
+													<div style="display: none;" class="sub-cat">
+							<select id="sub-other" style="padding: 8px;">
+							<option selected="selected" value="other">Other</option>							</select>
+						</div>
+												</div>
+				</div>
+
+				<div class="rows">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 10px 0px 0px 0px; text-align: right;">
+						<strong>Feedback</strong>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<textarea class="feed-text" id="feed-text" rows="10" style="width: 550px; max-width: 550px; max-height: 150px; height: 100px;"></textarea>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<button type="button" onclick="submit_feedback()" class="btn btn-raised btn-success">Add</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer" style="text-align: center;">
+				<br> <br> <br> <br> <br> <br>
+				<hr>
+				<button type="button" onclick="reset_feedback()" data-dismiss="modal" class="btn btn-raised btn-info">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$("#feedback-cat").on("change", function(){
+	$(".sub-cat").css("display", "none");
+	$("#sub-" + $(this).val()).parent().css("display", "block");
+});
+
+/*
+$("#feed-text").keypress(function(e) {
+	if (e . which == 13)
+		submit_feedback();
+});
+*/
+
+function submit_feedback(){
+	var text = $("#feed-text").val().trim();
+	if(text == ""){
+		alert("Blank feedback can't be added");
+		return;
+	}
+	var cat = $("#feedback-cat").val();
+	$("#feedback-history").append("<p><label>"+$("#feedback-cat option:selected").text()+">>"+$("#sub-"+cat+" option:selected").text()+":</label> "+text+"</p>")
+	$.post("./ajax/feedback-add.php", {
+		cat: cat,
+		subcat: $("#sub-"+cat).val(),
+		text : text
+	}, function(jsonObj) {
+		$("#feed-text").val("");
+		if(jsonObj.trim() != '1')
+			alert("feedback can't be added");
+	} ) . fail ( function () {
+		// $("#search-result").html("<div align=\"center\"><h2 class=\"text-danger\">Server error!!</h2><h4>Sorry for the inconvenience, please visit us again after sometime</h4></div>");
+	} );
+}
+function get_focused(){
+	$(".sub-cat").css("display", "none");
+	var focused = "other";
+	if(window.location.pathname.indexOf("home") != -1)
+		focused = window.location.search.split("&part")[0].replace("?nav=", "");
+	else if (window.location.pathname.indexOf("content") != -1)
+		focused = "content";
+	else if(window.location.pathname.indexOf("account") != -1)
+		focused = "account";
+	else
+		focused = "other";
+	$("#user_focus").html(focused);
+	$("#feedback-cat").val(focused);
+	$("#sub-" + focused).parent().css("display", "block");
+}
+function reset_feedback(){
+	if($("#feedback-history").html)
+		alert("thanks for submitting feedback");
+	$("#feedback-history").html("");
+}
+</script>
+<div class="modal fade" style="text-align: center;" id="modal-about" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title text-primary">
+					About				</h4>
+
+			</div>
+			<div class="modal-body" style="background: url('./img/ndl-logo-green-light.png') no-repeat center 50%; background-size: 50%;">
+				<p class="text-justify text-bolder">Ministry of Human Resource 
+Development under its National Mission on Education through Information 
+and Communication Technology has initiated the National Digital Library 
+(NDL) pilot project to develop a  framework of virtual repository of 
+learning resources with a single-window search facility. Filtered and  
+federated searching is employed to facilitate focused searching so that 
+learners can find out the right resource with least effort and in 
+minimum time. NDL is designed to hold content of any language and 
+provides interface support for leading vernacular languages (currently 
+Hindi and Bengali). It is being arranged to provide support for all 
+academic levels including researchers and life-long learners, all 
+disciplines, all popular form of access devices and differently-abled 
+learners.  It is being developed to help students to prepare for 
+entrance and competitive examination, to enable people to learn and 
+prepare from best practices from all over the world and to facilitate 
+researchers to perform inter-linked exploration from multiple sources. 
+The pilot project is devising a framework suitable for future scale up 
+with respect to content volume and diversity to become a full-blown 
+National Digital Library of India over time. It is being developed at 
+IIT Kharagpur.
+</p>
+			</div>
+			<div class="modal-footer" style="text-align: center">
+				<button type="button" data-dismiss="modal" class="btn btn-raised btn-primary">Ok</button>
+			</div>
+		</div>
+	</div>
+</div><div class="modal fade" id="modal-contact" role="dialog" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content" style="padding: 10px; text-align: center;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title text-primary">
+				Contact				</h4>
+			</div>
+			<div class="modal-body" style="padding: 10px;">
+				<div style="text-align: center; color: #615070;">
+	<h4>
+		<strong>National Digital Library Project</strong>
+	</h4>
+	<h5>Central Library (ISO-9001:2008 Certified)</h5>
+	<h5>Indian Institute of Technology Kharagpur</h5>
+	<h5>Kharagpur</h5>
+	<h5>India - 721302</h5>
+	<br>
+	<p>
+		<strong>Phone: +91-3222-282435</strong>
+	</p>
+	<p>
+		For any issue or feedback, please write to <strong> <a href="mailto:ndlproject@library.iitkgp.ernet.in?subject=Feedback">ndlproject@library.iitkgp.ernet.in</a></strong>
+	</p>
+</div>
+			</div>
+			<div class="modal-footer" style="text-align: center">
+				<button type="button" data-dismiss="modal" class="btn btn-raised btn-primary">Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" style="text-align: center;" id="modal-disclaimer" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title text-primary">
+					Disclaimer				</h4>
+
+			</div>
+			<div class="modal-body">
+				<p class="text-justify text-bolder">NDL is a conglomeration of 
+freely available or institutionally contributed or donated or publisher 
+managed contents. Almost all these contents are hosted and accessed from
+ respective sources. The responsibility for authenticity, relevance, 
+completeness, accuracy, reliability and suitability of these contents 
+rests with respective organization from where the contents are sourced 
+and NDL has no responsibility or liability for these. Every effort is 
+made to keep the NDL portal up and running smoothly. However, NDL takes 
+no responsibility for, and will not be liable for, the portal being 
+unavailable due to technical issues or otherwise.
+</p>
+			</div>
+			<div class="modal-footer" style="text-align: center">
+				<button type="button" data-dismiss="modal" class="btn btn-raised btn-primary">Ok</button>
+			</div>
+		</div>
+	</div>
+</div><div class="modal fade" style="text-align: center;" id="modal-sponsor" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title text-primary">
+					Sponsor				</h4>
+			</div>
+			<div class="modal-body">
+				<img src="National%20Digital%20Library_files/mhrd.png" class="img-responsive">
+				<hr>
+				<p class="text-justify text-bolder">Ministry of Human Resource 
+Development (MHRD), through its National Mission on Education through 
+Information and Communication Technology (NMEICT), has sponsored and 
+funded the National Digital Library (NDL) pilot project.
+</p>
+			</div>
+			<div class="modal-footer" style="text-align: center">
+				<button type="button" data-dismiss="modal" class="btn btn-raised btn-primary">Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+function change_ui_language(language){
+	document.cookie="lang="+language;
+	location.reload();
+}
+$("#nav-contact").on("click", function(){
+	$("#modal-contact").modal('show');
+});
+$("#nav-sponsor").on("click", function(){
+	$("#modal-sponsor").modal('show');
+});
+$("#nav-feedback").on("click", function(){
+	get_focused();
+	$("#modal-feedback").modal('show');
+});
+$("#nav-disclaimer").on("click", function(){
+	$("#modal-disclaimer").modal('show');
+});
+$("#nav-about").on("click", function(){
+	$("#modal-about").modal('show');
+});
+$("#nav-login").on("click", function(){
+	$("#modal-login").modal('show');
+});
+$("#nav-account-customize").on("click", function(){
+	$("#modalSettingsChange").modal('show');
+});
+$("#nav-account-logout").on("click", function(){
+	window.location="https://ndl.iitkgp.ac.in/account-login-logout.php";
+});
+</script>
+</div>
+
+
+
+</body></html>

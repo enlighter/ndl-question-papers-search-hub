@@ -11,10 +11,25 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#path to template files
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+#path to static files
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+#DEBUG
+#print(BASE_DIR)
+#print(STATIC_PATH)
+
+# Include BOOTSTRAP3_FOLDER in path
+BOOTSTRAP3_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..', 'node_modules',
+'bootstrap' ))
+#DEBUG
+#print(BOOTSTRAP3_FOLDER)
+if BOOTSTRAP3_FOLDER not in sys.path:
+    sys.path.insert(0, BOOTSTRAP3_FOLDER)
 
 
 # Quick-start development settings - unsuitable for production
@@ -132,6 +147,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Additional locations of static files
+#STATICFILES = [
+#    {
+#        'DIRS' : [
+#            STATIC_PATH
+#        ],
+#    }
+#]
+
 #add templates location
 TEMPLATES = [
     {
@@ -156,4 +180,3 @@ TEMPLATES = [
         },
     },
 ]
-

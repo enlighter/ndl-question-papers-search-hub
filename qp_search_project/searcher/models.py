@@ -24,7 +24,7 @@ LANGUAGES = (
 
 
 class board(models.Model):
-    name = models.CharField(max_length=12)
+    name = models.CharField(max_length=15)
     #example : name = CBSE
 
 
@@ -32,8 +32,18 @@ class board(models.Model):
         return self.name
 
 class exam(models.Model):
-    name = models.CharField(max_length=12)
+    name = models.CharField(max_length=15)
     # example : type = AISSCE
+
+
+    def __str__(self):
+        return self.name
+
+
+class educational_institute(models.Model):
+    name = models.CharField(max_length=90, unique=True)
+    state = models.CharField(max_length=21, choices=in_states.STATE_CHOICES)
+    city = models.CharField(max_length=21)
 
 
     def __str__(self):
@@ -46,7 +56,7 @@ class student(models.Model):
     city = models.CharField(max_length=21, null=True, blank=True)
     date_joined = models.DateTimeField(default=timezone.now)
     educational_role = models.CharField(max_length=39, choices=EDUCATIONAL_ROLE)
-    institute = models.CharField(max_length=99, null=True, blank=True)
+    institute = models.ForeignKey(educational_institute, null=True, blank=True)
     language = models.CharField(max_length=8, choices=LANGUAGES)
 
 
@@ -59,6 +69,7 @@ class search_result(models.Model):
     type = models.ForeignKey(exam, on_delete=models.CASCADE)
     source = models.ForeignKey(board, null=True, blank=True)
     subject = models.CharField(max_length=45)
+    location = models.URLField(max_length=120)
 
 
     def get_year(self):
@@ -68,4 +79,4 @@ class search_result(models.Model):
         return self.year_month.month
 
     def __str__(self):
-        return self.get_year() + str(self.type) + self.subject
+        return str(self.get_year()) + str(self.type) + self.subject

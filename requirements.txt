@@ -6,3 +6,4 @@ mysqlclient
 django-mysql
 django-bootstrap3
 django-debug-toolbar
+django-localflavor

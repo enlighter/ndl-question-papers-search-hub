@@ -133,13 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-gettext_noop = lambda s: s
-LANGUAGES = (
-    ('en', gettext_noop('English')),
-    ('hi', gettext_noop('Hindi')),
-    ('bn', gettext_noop('Bengali')),
-)
-
 TIME_ZONE =  'Asia/Kolkata'
 #TIME_ZONE = 'UTC'
 

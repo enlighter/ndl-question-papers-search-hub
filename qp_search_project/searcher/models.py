@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-from django.conf import settings
 
 from localflavor.in_ import in_states
 
@@ -17,6 +16,29 @@ EDUCATIONAL_ROLE= (
     ('ll', gettext_noop('Lifelong Learner')),
 )
 
+LANGUAGES = (
+    ('en', gettext_noop('English')),
+    ('hi', gettext_noop('Hindi')),
+    ('bn', gettext_noop('Bengali')),
+)
+
+
+class board(models.Model):
+    name = models.CharField(max_length=12)
+    #example : name = CBSE
+
+
+    def __str__(self):
+        return self.name
+
+class exam(models.Model):
+    name = models.CharField(max_length=12)
+    # example : type = AISSCE
+
+
+    def __str__(self):
+        return self.name
+
 
 class student(models.Model):
     user = models.OneToOneField(User, primary_key=True)
@@ -25,4 +47,25 @@ class student(models.Model):
     date_joined = models.DateTimeField(default=timezone.now)
     educational_role = models.CharField(max_length=39, choices=EDUCATIONAL_ROLE)
     institute = models.CharField(max_length=99, null=True, blank=True)
-    language = models.CharField(max_length=8, choices=settings.LANGUAGES)
+    language = models.CharField(max_length=8, choices=LANGUAGES)
+
+
+    def __str__(self):
+        return str(self.user)
+
+
+class search_result(models.Model):
+    year_month = models.DateField()
+    type = models.ForeignKey(exam, on_delete=models.CASCADE)
+    source = models.ForeignKey(board, null=True, blank=True)
+    subject = models.CharField(max_length=45)
+
+
+    def get_year(self):
+        return self.year_month.year
+
+    def get_month(self):
+        return self.year_month.month
+
+    def __str__(self):
+        return self.get_year() + str(self.type) + self.subject

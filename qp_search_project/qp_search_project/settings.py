@@ -133,7 +133,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+gettext_noop = lambda s: s
+LANGUAGES = (
+    ('en', gettext_noop('English')),
+    ('hi', gettext_noop('Hindi')),
+    ('bn', gettext_noop('Bengali')),
+)
+
+TIME_ZONE =  'Asia/Kolkata'
+#TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

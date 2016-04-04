@@ -3,9 +3,10 @@ from django.http import HttpResponse
 
 from .forms import NameForm
 
+applink = "/searcher"
+
 def index(request):
     context_dict = {
-        'email1': "mandal.sushovan92@gmail.com",
-        'form' : NameForm
+        'applink' : applink
     }
     return render(request, 'searcher/index.html', context_dict)

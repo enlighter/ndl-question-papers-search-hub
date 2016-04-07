@@ -22,16 +22,16 @@ Search Question Papers
     </div>
 
     <div class="row">
-        {% for i in 3|erange %}
+        {% for item in itemslist %}
         <div class="col-lg-4">
             <div class="bs-component">
                 <div class="panel panel-default">
                 <div class="panel-heading">
-                    Panel heading
+                    {{ item.header }}
                 </div>
                 <div class="panel-body">
-                  <a class="list-group-item" href="#navbar">
-                    Panel content
+                  <a class="list-group-item" href="{{ item.link }}">
+                    {{ item.content }}
                   </a>
                 </div>
               </div>

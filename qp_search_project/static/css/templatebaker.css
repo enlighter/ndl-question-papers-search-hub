@@ -64,18 +64,7 @@ p{
     color: #fff;
     padding-top: 300px;
 }
-.tb-section-1-sidebar {
-    background-image: url(../img/tb-bg1.jpg);
-    color: #fff;
-    padding-top: 300px;
-    background-attachment: scroll;
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+
 .tb-section-2 {
     background-image: linear-gradient(60deg, #5cc790 50%, #00b26f 50%);
     color: #ffffff;

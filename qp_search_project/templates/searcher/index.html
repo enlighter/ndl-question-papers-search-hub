@@ -2,41 +2,6 @@
 
 {% load portal_extras %}
 
-{% load bootstrap3 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-
 {% block title %}
 Search Question Papers
-{% endblock %}
-
-{% block content %}
-    <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-8 col-md-7 col-sm-6">
-            <h1>Welcome to NDL QP</h1>
-            <p class="lead">Click one of the options below, or search for your query</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="row">
-        {% for item in itemslist %}
-        <div class="col-lg-4">
-            <div class="bs-component">
-                <div class="panel panel-default">
-                <div class="panel-heading">
-                    {{ item.header }}
-                </div>
-                <div class="panel-body">
-                  <a class="list-group-item" href="{{ item.link }}">
-                    {{ item.content }}
-                  </a>
-                </div>
-              </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
 {% endblock %}

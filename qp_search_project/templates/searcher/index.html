@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% load portal_extras %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
 {% block title %}
 Search Question Papers
 {% endblock %}
@@ -8,18 +15,28 @@ Search Question Papers
     <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
-            <h1>Darkly</h1>
-            <p class="lead">Flatly in night mode</p>
+            <h1>Welcome to NDL QP</h1>
+            <p class="lead">Click one of the options below, or search for your query</p>
           </div>
-
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-4">
-            <div class="list-group table-of-contents">
-              <a class="list-group-item" href="#navbar">Navbar</a>
+    </div>
 
+    <div class="row">
+        {% for i in 3|erange %}
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    Panel heading
+                </div>
+                <div class="panel-body">
+                  <a class="list-group-item" href="#navbar">
+                    Panel content
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
+        {% endfor %}
     </div>
 {% endblock %}

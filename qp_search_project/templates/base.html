@@ -52,7 +52,8 @@ info@templatebaker.com
               <div class="form-group">
                 <input class="form-control" placeholder="Search" type="text">
               </div>
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
+Search</button>
         </form>
 
         <div class="collapse navbar-collapse" id="navbar">
@@ -79,8 +80,8 @@ info@templatebaker.com
                 <li class="dropdown">
                     <a href="#" class="btn tb-btn-bbg2 dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guest</a>
                     <ul class="dropdown-menu">
-                        <li><a href="no-sidebar.html">Login</a></li>
-                        <li><a href="no-sidebar.html">Register</a></li>
+                        <li><a href="{{ applink }}/login/">Login</a></li>
+                        <li><a href="{{ applink }}/register/">Register</a></li>
                     </ul>
                 </li>
             </ul>
@@ -94,17 +95,12 @@ info@templatebaker.com
     <div class="container">
         <div class="row tb-title">
             <div class="col-lg-12 text-center">
-                <h1>Give (something) legal or formal status.</h1>
-                <p>It was popularised in the 1960s  with the release of Letraset sheets containing Lorem</p>
-                <div>
-                    <a href="#" class="btn tb-btn-bbg">Our Tour</a>
-                    <a href="#" class="btn tb-btn-bbg2">Sign Up</a>
-                </div>
+                {% block header_content %} {% endblock %}
             </div>
         </div>
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
-
+                {% block upper_mid_content %} {% endblock %}
             </div>
         </div>
     </div>
@@ -167,7 +163,7 @@ info@templatebaker.com
                     <li style="float: right; padding-right: 10px;"><a href="http://bootswatch.com/help/">
                         <i class="fa fa-lg fa-question-circle"></i><i style="font-size: 70%;">Help</i>
                     </a></li>
-                    <li style="float: right; padding-right: 10px;"><a href="http://bootswatch.com/help/">
+                    <li style="float: right; padding-right: 10px;"><a href="{{ forumlink }}/" target="_blank">
                         <i class="fa fa-lg fa-comments-o"></i><i style="font-size: 70%;">Forum</i>
                     </a></li>
                 </ul>

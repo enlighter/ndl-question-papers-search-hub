@@ -1,117 +1,185 @@
+<!--
+
+Formalize Template
+
+AUTHOR
+http://templatebaker.com/
+
+LICENSE
+http://templatebaker.com/license/
+
+CREDITS
+https://unsplash.com/
+
+SUPPORT
+info@templatebaker.com
+
+-->
 <!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+    {% load staticfiles %}
     <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}" media="screen">
-    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
 
+    {% include 'bootstrap-css.html' %}
+
+    {% include 'templatebaker-css.html' %}
+
+    {% include 'fonts.html' %}
+
+    {% include 'misc-js.html' %}
 </head>
-
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="http://ndl.iitkgp.ac.in/" class="navbar-brand"><img src="{% static "images/ndl-logo.png" %}" height="21" /></a>
-          <a href="{{ applink }}/" class="navbar-brand">NDL QP</a>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://ndl.iitkgp.ac.in/" class="navbar-brand page-scroll"><img style="height: inherit; padding-bottom: 0.3em;" src="{% static "images/ndl-logo.png" %}" /></a>
+            <a class="navbar-brand page-scroll" href="{{ applink }}/">NDL QP</a>
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="browse-by-property">Browse <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="browse-by-property">
-                <li><a href="http://bootswatch.com/default/">All</a></li>
-                <li class="divider"></li>
-                <li><a href="http://bootswatch.com/cerulean/">By Year</a></li>
-                <li><a href="http://bootswatch.com/cosmo/">By Subject</a></li>
-                <li><a href="http://bootswatch.com/cyborg/">By Board</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="languages">Language <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="languages">
-                <li><a href="http://bootswatch.com/cerulean/">English</a></li>
-                <li><a href="http://bootswatch.com/cosmo/">Hindi</a></li>
-                <li><a href="http://bootswatch.com/cyborg/">Bengali</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="http://bootswatch.com/help/">Help</a>
-            </li>
-            <li>
-              <a href="http://news.bootswatch.com/">Blog</a>
-            </li>
 
-
-            <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search">
               <div class="form-group">
                 <input class="form-control" placeholder="Search" type="text">
               </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
+Search</button>
+        </form>
 
-           </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="login">Login <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="login">
-                <li><a href="{{ applink }}/login/">Login</a></li>
-                <li class="divider"></li>
-                <li style="text-align: center" >New to the Website?</li>
-                <li><a href="{{ applink }}/register/">Register</a></li>
-              </ul>
-            </li>
-
-            <li><a href="{{ forumlink }}/" target="_blank">Forum</a></li>
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-
-      {% block content %}{% endblock %}
-
-
-
-      <footer>
-        <div class="navbar-inverse navbar-fixed-bottom">
-          <div class="container-fluid navbar-collapse collapse navbar-responsive-collapse">
-
+        <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-              <li class="pull-right"><a href="#top">Back to top</a></li>
-              <li><a href="http://news.bootswatch.com/" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
-              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
-              <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="social-bar">Social <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="social-bar">
-               <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
-              </ul>
-              </li>
-              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
-              <li><a href="http://bootswatch.com/help/#api">API</a></li>
-              <li><a href="http://bootswatch.com/help/#support">Support</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="left-sidebar.html">All</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="no-sidebar.html">By Year</a></li>
+                        <li><a href="no-sidebar.html">By Subject</a></li>
+                        <li><a href="no-sidebar.html">By Board</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="no-sidebar.html">English</a></li>
+                        <li><a href="no-sidebar.html">Bengali</a></li>
+                        <li><a href="no-sidebar.html">Hindi</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a class="page-scroll">Welcome </a></li>
+                <li class="dropdown">
+                    <a href="#" class="btn tb-btn-bbg2 dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guest</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ applink }}/login/">Login</a></li>
+                        <li><a href="{{ applink }}/register/">Register</a></li>
+                    </ul>
+                </li>
             </ul>
-
-          </div>
         </div>
-
-      </footer>
-
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="tb-section-1">
+    <div class="container">
+        <div class="row tb-title">
+            <div class="col-lg-12 text-center">
+                {% block header_content %} {% endblock %}
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                {% block upper_mid_content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="tb-section-2">
+    <div class="container">
+        <div class="row tb-title">
+            <div class="col-lg-12 text-center">
+                <h1>Electronic typesetting</h1>
+                <p>But also the leap into electronic typesetting, remaining essentially unchanged</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 text-center tb-col">
+                <i class="fa fa-cloud-upload fa-4x tb-fa"></i>
+                <h3>dummy text ever since the</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+            <div class="col-lg-6 text-center tb-col">
+                <i class="fa fa-paper-plane fa-4x tb-fa"></i>
+                <h3>Letraset sheets containing Lorem</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    <script src="{% static "js/jquery-1.js" %}"></script>
-    <script src="{% static "js/bootstrap.js" %}"></script>
-    <script src="{% static "js/custom.js" %}"></script>
-  <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
+<footer>
+  <nav class="navbar navbar-default navbar-fixed-bottom" id="navbar-footer">
+    <div class="container">
+        <div class="row">
+            <div style="background-color: #494f5d;" class="col-lg-12 text-center">
+                <ul class="list-inline">
+                    <li>&copy; IIT Kharagpur</li>
+                    <li class="tb-copyright">Proudly created by: <a target="_blank" rel="nofollow" href="http://mhrd.gov.in">MHRD India</a> , <a target="_blank" rel="nofollow" href="http://www.iitkgp.ac.in">IIT KGP</a></li>
+                </ul>
+                <ul class="list-inline tb-social-icons">
+                    <li style="float: left;"><a href="">
+                        <i class="fa fa-lg fa-info-circle"></i><i style="font-size: 70%;"> About</i>
+                    </a></li>
+                    <li style="float: left; padding-left: 10px;"><a href="">
+                        <i class="fa fa-lg fa-puzzle-piece"></i><i style="font-size: 70%;">FAQ</i>
+                    </a></li>
+                    <li style="float: left; padding-left: 10px;"><a href="">
+                        <i class="fa fa-lg fa-legal"></i><i style="font-size: 70%;"> Disclaimer</i>
+                    </a></li>
 
-</body></html>
+
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href=""><i class="fa fa-linkedin-square fa-lg"></i></a></li>
+
+                    <li style="float: right;"><a href="http://bootswatch.com/help/">
+                        <i class="fa fa-lg fa-phone-square"></i><i style="font-size: 70%;">Contact</i>
+                    </a></li>
+                    <li style="float: right; padding-right: 10px;"><a href="http://bootswatch.com/help/">
+                        <i class="fa fa-lg fa-question-circle"></i><i style="font-size: 70%;">Help</i>
+                    </a></li>
+                    <li style="float: right; padding-right: 10px;"><a href="{{ forumlink }}/" target="_blank">
+                        <i class="fa fa-lg fa-comments-o"></i><i style="font-size: 70%;">Forum</i>
+                    </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+  </nav>
+</footer>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+{% include 'bootstrap-js.html' %}
+
+{% include 'animated-header-js.html' %}
+
+</body>
+</html>

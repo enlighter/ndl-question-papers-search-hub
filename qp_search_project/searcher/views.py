@@ -8,19 +8,20 @@ applink = "/searcher"
 #put the full weblink to forum here
 forumlink = ""
 boards_list = [
-    'CBSE Class X board',
-    'CBSE Class XII board',
+    'CBSE Class X',
+    'CBSE Class XII',
     'JEE',
     'ICSE',
+    'WBJEE',
 ]
 
 def index(request):
     items_list = []
     for board in boards_list:
         dict = {
-            'header': "%s papers" % board,
+            'header': "Search past %s papers" % board,
             'link': "applink" + '/search?',
-            'content': "Click here to browse all %s exam question papers" % board,
+            'content': "Click here to search within %s exam question papers" % board,
         }
         items_list.append(dict)
 

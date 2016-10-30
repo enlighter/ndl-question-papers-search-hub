@@ -6,3 +6,4 @@ sudo mysql -u root -p
     exit;
 
 python manage.py runserver
+python manage.py migrate

@@ -106,6 +106,9 @@ DATABASES = {
         'PASSWORD': 'test3R',
         'HOST': 'localhost',
         'PORT': '',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 

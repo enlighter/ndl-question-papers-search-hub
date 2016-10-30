@@ -1,0 +1,8 @@
+sudo mysql -u root -p
+    create database ndl;
+    create user 'public'@'localhost' identified by 'test3R';
+    grant all privileges on ndl.* to 'public'@'localhost';
+    flush privileges;
+    exit;
+
+python manage.py runserver

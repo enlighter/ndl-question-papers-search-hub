@@ -185,3 +185,6 @@ TEMPLATES = [
         },
     },
 ]
+
+#User Profile Authentication
+AUTH_PROFILE_MODULE = 'models.student'

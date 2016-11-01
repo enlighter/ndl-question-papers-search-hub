@@ -78,7 +78,12 @@ Search</button>
                 </li>
                 <li class="active"><a class="page-scroll">Welcome </a></li>
                 <li class="dropdown">
-                    <a href="#" class="btn tb-btn-bbg2 dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guest</a>
+                    <a href="#" class="btn tb-btn-bbg2 dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% if request.user.username %}
+                                                                                                                                                            {{ request.user.username }}
+                                                                                                                                                        {% else %}
+                                                                                                                                                            Guest
+                                                                                                                                                        {% endif %}
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ applink }}/login/">Login</a></li>
                         <li><a href="{{ applink }}/register/">Register</a></li>

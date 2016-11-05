@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import FormView
 
-from .forms import UserLogin
+from .forms import UserLogin, RegistrationForm
 
 applink = "/searcher"
 #put the full weblink to forum here
@@ -40,6 +40,16 @@ class Login(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(Login, self).get_context_data(**kwargs)
+        context['applink'] = applink
+        context['forumlink'] = forumlink
+        return context
+
+class Register(FormView):
+    template_name = 'searcher/register.html'
+    form_class = RegistrationForm
+
+    def get_context_data(self, **kwargs):
+        context = super(Register, self).get_context_data(**kwargs)
         context['applink'] = applink
         context['forumlink'] = forumlink
         return context

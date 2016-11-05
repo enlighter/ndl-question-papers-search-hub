@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load portal_extras %}
+{% load bootstrap3 %}
+
+{% block title %}
+Login Page
+{% endblock %}
+
+{% block header_content %}
+    <h1>Register</h1>
+    <p>Enter your registration details below.</p>
+{% endblock %}
+
+{% block upper_mid_content %}
+  <form action="/url/to/submit/" role="form" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn tb-btn-bbg2">
+         Submit
+        </button>
+    {% endbuttons %}
+  </form>
+{% endblock %}

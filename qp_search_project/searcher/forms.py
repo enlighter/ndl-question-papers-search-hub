@@ -16,4 +16,5 @@ class LoginForm(forms.Form):
 class RegistrationForm(forms.ModelForm):
     class Meta:
         model = student
-        fields = ['user', 'state', 'city', 'educational_role', 'institute', 'language']
+        fields = ['state', 'city', 'educational_role', 'institute', 'language']
+        exclude = ('user',)

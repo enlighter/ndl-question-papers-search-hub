@@ -66,13 +66,12 @@ class student(models.Model):
         return str(self.user)
 
 @receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        student.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+def create_profile(sender, **kwargs):
+    user = kwargs["instance"]
+    if kwargs["created"]:
+        user_profile = student(user=user)
+        user_profile.save()
+post_save.connect(create_profile, sender=User)
 
 # Create student instance on access - very useful if you plan to always have a Student obj associated with a User object anyway
 User.student = property(lambda u: student.objects.get_or_create(user=u)[0])

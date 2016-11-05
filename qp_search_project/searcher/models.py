@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 from localflavor.in_ import in_states
 
@@ -51,7 +53,7 @@ class educational_institute(models.Model):
 
 
 class student(models.Model):
-    user = models.OneToOneField(User, primary_key=True)
+    user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     state = models.CharField(max_length=21, null=True, blank=True, choices=in_states.STATE_CHOICES)
     city = models.CharField(max_length=21, null=True, blank=True)
     date_joined = models.DateTimeField(default=timezone.now)
@@ -62,6 +64,18 @@ class student(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        student.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+
+# Create student instance on access - very useful if you plan to always have a Student obj associated with a User object anyway
+User.student = property(lambda u: student.objects.get_or_create(user=u)[0])
 
 
 class search_result(models.Model):

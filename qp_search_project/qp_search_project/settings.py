@@ -187,4 +187,4 @@ TEMPLATES = [
 ]
 
 #User Profile Authentication
-AUTH_PROFILE_MODULE = 'models.student'
+AUTH_PROFILE_MODULE = 'searcher.student'

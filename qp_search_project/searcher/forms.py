@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-
+from django.contrib.auth.forms import AuthenticationForm
 
 from .models import student
 
@@ -9,9 +9,11 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ('first_name', 'last_name', 'email')
 
-class LoginForm(forms.Form):
-    nick = forms.CharField(label='Your username', max_length=15)
-    password = forms.CharField(label='password', widget=forms.PasswordInput())
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(label="Username", max_length=30,
+                               widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'username'}))
+    password = forms.CharField(label="Password", max_length=30,
+                               widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'password'}))
 
 class RegistrationForm(forms.ModelForm):
     class Meta:

@@ -47,6 +47,7 @@ class Login(FormView):
 class Register(FormView):
     template_name = 'searcher/register.html'
     form_class = RegistrationForm
+    success_url = '/register/done/'
 
     def get_context_data(self, **kwargs):
         context = super(Register, self).get_context_data(**kwargs)

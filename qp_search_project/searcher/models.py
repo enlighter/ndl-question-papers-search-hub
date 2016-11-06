@@ -64,16 +64,16 @@ class student(User):
     def __str__(self):
         return str(self.user)
 
-@receiver(post_save, sender=User)
-def create_profile(sender, **kwargs):
-    user = kwargs["instance"]
-    if kwargs["created"]:
-        user_profile = student(user=user)
-        user_profile.save()
-post_save.connect(create_profile, sender=User)
+#@receiver(post_save, sender=User)
+#def create_profile(sender, **kwargs):
+#    user = kwargs["instance"]
+#    if kwargs["created"]:
+#        user_profile = student(user=user)
+#        user_profile.save()
+#post_save.connect(create_profile, sender=User)
 
 # Create student instance on access - very useful if you plan to always have a Student obj associated with a User object anyway
-User.student = property(lambda u: student.objects.get_or_create(user=u)[0])
+#User.student = property(lambda u: student.objects.get_or_create(user=u)[0])
 
 
 class search_result(models.Model):

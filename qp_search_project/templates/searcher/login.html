@@ -8,11 +8,17 @@ Login Page
 {% endblock %}
 
 {% block header_content %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
     <h1>Login</h1>
     <p>Enter your login details below.</p>
 {% endblock %}
 
 {% block upper_mid_content %}
+    {% if user.is_authenticated %}
+        <p>You are already logged in!</p>
+    {% else %}
   <form action="/url/to/submit/" role="form" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
@@ -22,4 +28,5 @@ Login Page
         </button>
     {% endbuttons %}
   </form>
+    {% endif %}
 {% endblock %}

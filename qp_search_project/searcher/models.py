@@ -52,11 +52,10 @@ class educational_institute(models.Model):
         return self.name
 
 
-class student(models.Model):
-    user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+class student(User):
+    #user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     state = models.CharField(max_length=21, null=True, blank=True, choices=in_states.STATE_CHOICES)
     city = models.CharField(max_length=21, null=True, blank=True)
-    date_joined = models.DateTimeField(default=timezone.now)
     educational_role = models.CharField(max_length=39, choices=EDUCATIONAL_ROLE)
     institute = models.ForeignKey(educational_institute, null=True, blank=True)
     language = models.CharField(max_length=8, choices=LANGUAGES)

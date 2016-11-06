@@ -7,3 +7,7 @@ sudo mysql -u root -p
 
 python manage.py runserver
 python manage.py migrate
+
+/* for resetting migrations */
+in the <app>/migrations/ folder delete all files except '__init__.py'
+then run python manage.py makemigrations

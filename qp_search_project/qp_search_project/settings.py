@@ -187,6 +187,6 @@ TEMPLATES = [
 ]
 
 #User Profile Authentication
-AUTH_PROFILE_MODULE = 'searcher.student'
+AUTH_USER_MODEL = 'searcher.student'
 
 LOGIN_REDIRECT_URL = '/searcher/'

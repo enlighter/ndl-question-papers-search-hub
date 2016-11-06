@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from django.utils import timezone
 from django.dispatch import receiver
 from django.db.models.signals import post_save
@@ -52,13 +52,14 @@ class educational_institute(models.Model):
         return self.name
 
 
-class student(User):
+class student(AbstractUser):
     #user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     state = models.CharField(max_length=21, null=True, blank=True, choices=in_states.STATE_CHOICES)
     city = models.CharField(max_length=21, null=True, blank=True)
     educational_role = models.CharField(max_length=39, choices=EDUCATIONAL_ROLE)
     institute = models.ForeignKey(educational_institute, null=True, blank=True)
     language = models.CharField(max_length=8, choices=LANGUAGES)
+    REQUIRED_FIELDS = ['email', 'educational_role', 'language']
 
 
     def __str__(self):

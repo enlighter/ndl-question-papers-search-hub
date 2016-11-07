@@ -13,7 +13,7 @@ Registration Page
 {% endblock %}
 
 {% block upper_mid_content %}
-  <form action="/url/to/submit/" role="form" method="post" class="form">
+  <form role="form" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

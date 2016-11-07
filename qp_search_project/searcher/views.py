@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import FormView
+from django.views.generic import FormView, CreateView
 
 from .forms import LoginForm, RegistrationForm
+from .models import student
 
 applink = "/searcher"
 #put the full weblink to forum here
@@ -44,10 +45,11 @@ class Login(FormView):
         context['forumlink'] = forumlink
         return context
 
-class Register(FormView):
+class Register(CreateView):
     template_name = 'searcher/register.html'
     form_class = RegistrationForm
-    success_url = '/register/done/'
+    model = student
+    success_url = '/searcher/login'
 
     def get_context_data(self, **kwargs):
         context = super(Register, self).get_context_data(**kwargs)

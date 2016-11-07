@@ -37,7 +37,7 @@ def index(request):
 class Login(FormView):
     template_name = 'searcher/login.html'
     form_class = LoginForm
-
+    success_url = '/searcher/'
 
     def get_context_data(self, **kwargs):
         context = super(Login, self).get_context_data(**kwargs)

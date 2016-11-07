@@ -19,7 +19,7 @@ Login Page
     {% if user.is_authenticated %}
         <p>You are already logged in!</p>
     {% else %}
-  <form action="/url/to/submit/" role="form" method="post" class="form">
+  <form role="form" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

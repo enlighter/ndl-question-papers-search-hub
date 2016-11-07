@@ -84,10 +84,16 @@ Search</button>
                                                                                                                                                             Guest
                                                                                                                                                         {% endif %}
                     </a>
+                {% if user.is_authenticated %}
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ applink }}/logout/">Logout</a></li>
+                    </ul>
+                {% else %}
                     <ul class="dropdown-menu">
                         <li><a href="{{ applink }}/login/">Login</a></li>
                         <li><a href="{{ applink }}/register/">Register</a></li>
                     </ul>
+                {% endif %}
                 </li>
             </ul>
         </div>

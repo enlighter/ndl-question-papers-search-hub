@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User, AbstractUser
+from django.contrib.auth.models import AbstractUser, UserManager
 from django.utils import timezone
 from django.dispatch import receiver
 from django.db.models.signals import post_save
@@ -59,11 +59,20 @@ class student(AbstractUser):
     educational_role = models.CharField(max_length=39, choices=EDUCATIONAL_ROLE)
     institute = models.ForeignKey(educational_institute, null=True, blank=True)
     language = models.CharField(max_length=8, choices=LANGUAGES)
+
+    #is_staff = models.BooleanField(u'staff status', default=False,
+    #                               help_text=u'Designates whether the user can log into this admin '
+    #                                         'site.')
+    #is_active = models.BooleanField(u'active', default=True,
+    #                               help_text=u'Designates whether this user should be treated as '
+    #                                          'active. Unselect this instead of deleting accounts.')
+
     REQUIRED_FIELDS = ['email', 'educational_role', 'language']
+    objects = UserManager()
 
 
     def __str__(self):
-        return str(self.user)
+        return str(self.username)
 
 #@receiver(post_save, sender=User)
 #def create_profile(sender, **kwargs):

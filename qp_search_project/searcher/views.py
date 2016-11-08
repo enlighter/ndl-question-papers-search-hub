@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as auth_login
 from django.views.generic import FormView, CreateView
 from django.utils.decorators import method_decorator
@@ -7,7 +8,7 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 
-from .forms import LoginForm, RegistrationForm
+from .forms import RegistrationForm
 from .models import student
 
 applink = "/searcher"
@@ -41,7 +42,7 @@ def index(request):
 
 class Login(FormView):
     template_name = 'searcher/login.html'
-    form_class = LoginForm
+    form_class = AuthenticationForm
     success_url = '/searcher/'
 
     @method_decorator(sensitive_post_parameters('password'))
